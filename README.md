@@ -19,8 +19,7 @@ conditions)
 ○ value: Optional value for operand nodes (e.g., number for comparisons)
 
 
-
-Step to run the project:
+**Step to run the project:**
 
 npm init
 
@@ -30,7 +29,7 @@ Package need to Install: body-parser, dotenv, express, mongoose, cors, path
 
 Use this in your git: npm i body-parser dotenv express mongoose cors path
 
-Make a Directory in your VS Code:
+**Make a Directory in your VS Code:**
 
 Rule Engine/ 
 │
@@ -55,27 +54,27 @@ Rule Engine/
 │   
 └── server.js 
 
-Create .env file and use ypur
-MONGO_URL=""
+**Create .env file and use ypur
+MONGO_URL=""**
 
 **Test Case 1: Create a Rule with Valid Data**
 
 Input:
 
-Test case for Create Rule
+**Test case for Create Rule**
 Rule Name: Age Check
 Rule String: age > 18
 
-Test case for Combine Rule
+**Test case for Combine Rule**
 Rule 1: Age Check
 Operator: AND
 Rule 2: Country Check
 
-Test Case for Evaluate Rule
+**Test Case for Evaluate Rule**
 Rule: CombinedRule (condition: (age > 18) AND (country == 'US'))
 
 
-Create a Rule
+**Create a Rule**
 
 Endpoint: /api/create_rule
 Method: POST
@@ -85,18 +84,18 @@ Request Body:
   "ruleName": "Age Check"
 }
 
-Combine Rules
+**Combine Rules**
 
 Endpoint: /api/rules/combine_rules
 Method: POST
 Request Body:
 
-Evaluate a Rule
+**Evaluate a Rule**
 
 Endpoint: /api/rules/evaluate_rule
 Method: POST
 
 
-After your coding
+**After your coding**
 
 run a nodemon server.js OR node server.js
