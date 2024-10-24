@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rule Engine</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Rule Engine with AST</h1>
+
+      <h2 style="margin-top: 50px;" >Create Rule</h2>
+      <form id="create-rule-form">
+        <div>
+          <label for="ruleName">Rule Name:</label>
+          <input type="text" id="ruleName" name="ruleName" required />
+        </div>
+        <div>
+          <label for="ruleString">Rule:</label>
+          <input type="text" id="ruleString" name="ruleString" required />
+        </div>
+        <button type="submit">Create Rule</button>
+      </form>
+      <pre id="create-rule-result"></pre>
+
+      <hr>
+
+      <h2 style="margin-top: 50px;">Combine Rules</h2>
+      <form id="combine-rules-form">
+        <h3>Enter Rules to Combine:</h3>
+        <div id="rules-inputs">
+          <div class="rule-container">
+            <label for="combine-rule1">Rule 1:</label>
+            <input type="text" id="combine-rule1" name="rule1" required />
+            <label for="operator1">Operator:</label>
+            <select id="operator1" name="operator1">
+              <option value="AND">AND</option>
+              <option value="OR">OR</option>
+            </select>
+          </div>
+        </div>
+        <button type="button" id="add-rule">Add Another Rule</button>
+        <button type="submit">Combine Rules</button>
+      </form>
+      <pre id="combine-rules-result"></pre>
+
+      <hr>
+      <h2 style="margin-top: 50px;">Evaluate Rule</h2>
+      <form id="evaluate-rule-form">
+        <div>
+          <label for="evaluate-ast">Rule Name:</label>
+          <input type="text" id="evaluate-ast" name="ast" required />
+        </div>
+        <div>
+          <label for="evaluate-data">Data JSON:</label>
+          <textarea id="evaluate-data" name="data" required></textarea>
+        </div>
+        <button type="submit">Evaluate Rule</button>
+      </form>
+      <pre id="evaluate-rule-result"></pre>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
